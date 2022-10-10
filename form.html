@@ -149,6 +149,48 @@
 
 </body>
 
+<!--
+        regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
 
+    Above regular expression checks for valid mail-id entered by user.
+
+    \w shows any word character including Characters, Numbers and Underscore
+
+    + Symbol shows one or more combination of characters.
+
+    Most common used special characters in mail-id’s are  Dot(.) ,Underscore(_) and (-) . Hence we have included them in \.- expression.
+
+    * Denotes Zero or more combinations of given characters.
+
+    $ Denotes End of the string or regular expression.
+
+    g denotes all matches from starting to end of given string with regular expression. g is used to find all the occurrences of the pattern instead of stopping after the first match.
+
+        regPhone=/^\d{10}$/;
+
+    In the Phone Number validation :
+
+    ^ denotes starting of the string and it should be of type \d. That means it should contain only digits from 0 to 9. Any non-digit characters will not be accepted under \d.
+
+    {10} denotes that length of the Digit characters should be exactly 10 only. No extra or less characters will be permitted.
+
+    $ Denotes end of the string.
+        regName = /\d+$/g;  
+
+Under user’s name validation :
+
+User’s original name should not contain any kind of Numbers, Hence to avoid it we have used again \d class of characters which will accept only any combinations of 0-9 digits(Here + denotes one or more combination of any digits from 0 to 9). After that verification takes place using regName.test(name) .
+
+Where “name” is the variable value entered by user in form’s name field. If it contains any kind of Digit value then it will prompt message of “Please enter your name properly.”
+
+    Validation on Password length :
+
+If password entered by user is too small then browser should prompt message to user that password length is too small or like that .
+
+Hence we have used this validation also in form field. If password entered by user have length less than 6 then browser will prompt message to user that “Password should be at least 6 character long”.
+Please note that Regular_Expression.test(String) will check user entered string with the standard regular expression, 
+If it matches then if condition will be satisfied and !Regular_Expression.test(String) will check for alternative condition.
+
+-->
 
 </html>
