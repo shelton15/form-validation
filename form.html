@@ -150,7 +150,7 @@
 </body>
 
 <!--
-        regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+     a)   regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
 
     Above regular expression checks for valid mail-id entered by user.
 
@@ -166,7 +166,7 @@
 
     g denotes all matches from starting to end of given string with regular expression. g is used to find all the occurrences of the pattern instead of stopping after the first match.
 
-        regPhone=/^\d{10}$/;
+     b)   regPhone=/^\d{10}$/;
 
     In the Phone Number validation :
 
@@ -175,28 +175,30 @@
     {10} denotes that length of the Digit characters should be exactly 10 only. No extra or less characters will be permitted.
 
     $ Denotes end of the string.
-        regName = /\d+$/g;  
 
-Under user’s name validation :
+    c)    regName = /\d+$/g;  
 
-User’s original name should not contain any kind of Numbers, Hence to avoid it we have used again \d class of characters which will accept only any combinations of 0-9 digits(Here + denotes one or more combination of any digits from 0 to 9). After that verification takes place using regName.test(name) .
+    Under user’s name validation :
 
-Where “name” is the variable value entered by user in form’s name field. If it contains any kind of Digit value then it will prompt message of “Please enter your name properly.”
+    User’s original name should not contain any kind of Numbers, Hence to avoid it we have used again \d class of characters which will accept only any combinations of 0-9 digits(Here + denotes one or more combination of any digits from 0 to 9). After that verification takes place using regName.test(name) .
 
-    Validation on Password length :
+    Where “name” is the variable value entered by user in form’s name field. If it contains any kind of Digit value then it will prompt message of “Please enter your name properly.”
 
-If password entered by user is too small then browser should prompt message to user that password length is too small or like that .
+    d)  Validation on Password length :
 
-Hence we have used this validation also in form field. If password entered by user have length less than 6 then browser will prompt message to user that “Password should be at least 6 character long”.
-Please note that Regular_Expression.test(String) will check user entered string with the standard regular expression, 
-If it matches then if condition will be satisfied and !Regular_Expression.test(String) will check for alternative condition.
-    Validation on Dropdown menu items :
+    If password entered by user is too small then browser should prompt message to user that password length is too small or like that .
 
-If we have not selected any items from Drop-Down menu then it will prompt message that “Please enter your course”. Because (-1) denotes that not any field is selected and subsequent option items are considered as indices 0,1,2,3,4, and so on..
+    Hence we have used this validation also in form field. If password entered by user have length less than 6 then browser will prompt message to user that “Password should be at least 6 character long”.
+    Please note that Regular_Expression.test(String) will check user entered string with the standard regular expression, 
+    If it matches then if condition will be satisfied and !Regular_Expression.test(String) will check for alternative condition.
 
-For indexing purposes .selectedIndex method is being used. If we are clicking on BTECH  then selectedIndex = 0, for BBA selectedIndex = 1 and so on..
+    e)  Validation on Dropdown menu items :
 
-And if user doesn’t select any option then by default it will take selectedIndex = (-1) and it should not occur . Hence what.selectedIndex == (-1) is used in If condition.
+    If we have not selected any items from Drop-Down menu then it will prompt message that “Please enter your course”. Because (-1) denotes that not any field is selected and subsequent option items are considered as indices 0,1,2,3,4, and so on..
+
+    For indexing purposes .selectedIndex method is being used. If we are clicking on BTECH  then selectedIndex = 0, for BBA selectedIndex = 1 and so on..
+
+    And if user doesn’t select any option then by default it will take selectedIndex = (-1) and it should not occur . Hence what.selectedIndex == (-1) is used in If condition.
 -->
 
 </html>
