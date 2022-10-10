@@ -190,7 +190,13 @@ If password entered by user is too small then browser should prompt message to u
 Hence we have used this validation also in form field. If password entered by user have length less than 6 then browser will prompt message to user that “Password should be at least 6 character long”.
 Please note that Regular_Expression.test(String) will check user entered string with the standard regular expression, 
 If it matches then if condition will be satisfied and !Regular_Expression.test(String) will check for alternative condition.
+    Validation on Dropdown menu items :
 
+If we have not selected any items from Drop-Down menu then it will prompt message that “Please enter your course”. Because (-1) denotes that not any field is selected and subsequent option items are considered as indices 0,1,2,3,4, and so on..
+
+For indexing purposes .selectedIndex method is being used. If we are clicking on BTECH  then selectedIndex = 0, for BBA selectedIndex = 1 and so on..
+
+And if user doesn’t select any option then by default it will take selectedIndex = (-1) and it should not occur . Hence what.selectedIndex == (-1) is used in If condition.
 -->
 
 </html>
